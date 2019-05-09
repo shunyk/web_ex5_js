@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<img alt="cat" src="./images/01.jpg" id="cat1" class="c1" title="t1">
+	<br>
+	<button onclick="f1()">CLICK</button>
+	<button onclick="f2()">CLICK2</button>
+	<button onclick="f2()"></button>
+	<script type="text/javascript">
+	var cat = document.getElementById('cat1');
+		function f1(){
+			//Attribute 가져오기
+			//cat.getAttribute("속성명");
+			//Attribute 변경이나 추가
+			//cat.setAttribute("속성명", "변경값");
+			alert(cat.alt);
+			alert(cat.src);
+			alert(cat.id);
+			alert(cat.className);
+			alert(cat.title);
+		}
+		function f2(){
+			cat.setAttribute("src", "./images/03.jpg");
+		}
+	</script>
+</body>
+</html>

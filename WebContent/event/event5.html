@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var btn = document.getElementById("btn");
+		var result = document.getElementById("result");
+		btn.addEventListener('click', function(){
+			result.innerHTML = '<button id="btn1">CLICK</button>';
+		});
+	}
+</script>
+<style type="text/css">
+	#btn1{
+	background-color: red
+	}
+</style>
+</head>
+<body>
+	<button id="btn">CLICK</button>
+	<div id="result"></div>
+</body>
+</html>

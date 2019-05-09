@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text">
+	<input type="text" onkeypress="go()" id="in">
+	<div id="result"></div>
+	<button id="btn">CLICK</button>
+	
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		btn.onclick = function() {
+			alert("click");
+		}
+	
+		function go() {
+			var i = document.getElementById("in").value;
+			var result = document.getElementById("result");
+			result.innerHTML=i;
+		}
+	</script>
+</body>
+</html>

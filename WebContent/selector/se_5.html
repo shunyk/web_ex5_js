@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		점심<input type="radio" name="food" class="food" id="lunch" checked="checked">
+		저녁<input type="radio" name="food" class="food" id="dinner"><br>
+		<button onclick="go()">CLICK</button>
+	</div>
+	<div style="display: block;" id="l">
+		<p>김치찌개</p>
+		<p>짜장면</p>
+		<p>도시락</p>
+	</div>
+	<div style="display: none;" id="d">
+		<p>햄버거</p>
+		<p>피자</p>
+		<p>치킨</p>
+	</div>
+
+	<script type="text/javascript">
+		function go() {
+			var food = document.getElementsByClassName('food');
+			var lunch = document.getElementById("l");
+			var dinner = document.getElementById("d");
+					if(food[1].checked){
+						l.style.display="none";
+						d.style.display="block";
+					}else{
+						d.style.display="none";
+						l.style.display="block";
+					}
+		}
+	</script>
+</body>
+</html>

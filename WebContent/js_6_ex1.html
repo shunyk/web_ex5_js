@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="a" value="10">
+	<input type="text" id="calc" value="-">
+	<input type="text" id="b" value="3"> =
+	<input type="text" id="answer">
+	<br>
+	<button onclick="f1()">CLICK</button>
+
+	<script type="text/javascript">
+		var answer = document.getElementById('answer');
+		var a1 = document.getElementById('a');
+		var calc1 = document.getElementById('calc');
+		var b1 = document.getElementById('b');
+		function f1() {
+			if (calc1.value == '-') {
+				var an = a1.value - b1.value;
+				answer.value = an;
+			}else if(calc1.value == '+') {
+				var an = a1.value + b1.value;
+				answer.value = an;
+			}else if(calc1.value == '*') {
+				var an = a1.value * b1.value;
+				answer.value = an;
+			}else if(calc1.value == '/') {
+				var an = a1.value / b1.value;
+				answer.value = an;
+			}
+		}
+	</script>
+</body>
+</html>

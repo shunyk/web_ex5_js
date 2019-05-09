@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		margin-left: 30%;
+	}
+	.info{
+		display: block;
+		width: 150px;
+		height: 200px;
+		border: 1px solid black;
+		float: left;
+	}
+	img{
+		width: 120px;
+		height: 100px;
+		padding: 15px;
+	}
+	.info > div{
+		width: 120px;
+		height: 25px;
+		padding: 15px;
+	}
+	#d1{
+		width: 100%;
+	}
+	#d2{
+		width: 100%;
+		float: left;
+	}
+	#button {
+		width:100%;
+		float: left;
+		margin-left: 27%;
+	}
+</style>
+</head>
+<body>
+	<div id="d1">
+		<div class="info" id="c1">
+			<input type="checkbox" class="check" title="c1">
+			<img alt="벵갈 고양이" src="../images/bang.jpg">
+			<div>뱅갈</div>
+		</div>
+		<div class="info" id="c2">
+			<input type="checkbox" class="check" title="c2">
+			<img alt="스코티시 폴드" src="../images/fold.jpg">
+			<div>스코티시 폴드</div>
+		</div>
+		<div class="info" id="c3">
+			<input type="checkbox" class="check" title="c3">
+			<img alt="노르웨이숲" src="../images/nor.png">
+			<div>노르웨이숲</div>
+		</div>
+		<div class="info" id="c4">
+			<input type="checkbox" class="check" title="c4">
+			<img alt="먼치킨" src="../images/mun.jpg">
+			<div>먼치킨</div>
+		</div>
+		<div class="info" id="c5">
+			<input type="checkbox" class="check" title="c5">
+			<img alt="렉돌" src="../images/rag.jpg">
+			<div>렉돌</div>
+		</div>
+	</div>
+	<div id=button>
+	<button onclick="go()">CLICK</button>
+	</div>
+	<div id="d2"></div>
+	
+	<script type="text/javascript">
+		function go(){
+			var info = document.getElementsByClassName("info");
+			var check = document.getElementsByClassName("check");
+			var d2 = document.getElementById("d2");
+			var value = '';
+			for(var i=0;i<check.length;i++){
+				if(check[i].checked){
+					//var id = document.getElementById(info[i].id);
+					value += "<div class=info>";
+					//value += id.innerHTML;
+					value += document.getElementById(check[i].title).innerHTML;
+					value += "</div>";
+				}
+			}
+			d2.innerHTML = value;
+		}
+	</script>
+</body>
+</html>

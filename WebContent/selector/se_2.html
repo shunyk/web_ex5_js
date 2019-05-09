@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="d1" class="c1">
+	</div>
+	<button onclick="go()">CLICK</button>
+	<div  id="d2" class="c1">
+		<input type="text" id="i1">
+		<button onclick="go2()">CLICK</button>
+	</div>
+	<script type="text/javascript">
+		function go() {
+			var d1 = document.getElementById("d1");
+			d1.innerHTML = "<img alt=cat1 src=/web_ex5_js/images/01.jpg>";
+		}
+		function go2(){
+			var d1 = document.getElementById("d1");
+			var i1 = document.getElementById("i1");
+			var count = i1.value;
+			for(i=0; i<count; i++){
+				d1.innerHTML += "<input type=text><br>";
+			}
+		}
+	</script>
+</body>
+</html>

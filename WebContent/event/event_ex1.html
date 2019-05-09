@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p><input type="password" class="pw"></p>
+	<p><input type="password" class="pw"></p>
+	<div id="d1"></div>
+	
+	<script type="text/javascript">
+		window.onload = function(){
+			var pw = document.getElementsByClassName("pw");
+			var d1 = document.getElementById("d1");
+			pw[1].addEventListener("keyup", function () {
+				if(pw[1].value == pw[0].value){
+					d1.innerHTML = "<p>같습니다</p>";
+				}else{
+					d1.innerHTML = "<p>틀립니다</p>";
+				}
+			})
+		}
+	</script>
+</body>
+</html>
