@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+	  var id_c = 1;
+	  var id = document.getElementById("id");
+	  var open = opener.document.getElementById("id");
+	  id.value = open.value;
+		$('#use').click(function() {
+			if(id_c!=0){
+				alert("중복확인해주세요");
+			}else{
+				open.value = id.value;
+				
+				close();
+			}
+		});
+		
+		$('#check').click(function () {
+			if($('#id').val().length >= 10){
+				alert("아이디는 10자 미만으로 입력해주세요");
+				id_c=1;
+			}else{
+				id_c=0;
+			}
+		});
+	});
+  </script>
+</head>
+<body>
+	<div class="container">
+		<h2>Join Form</h2>
+		<form action="/action_page.php">
+			<div class="form-group">
+				<label for="id">Id:</label> <input type="text" class="form-control"
+					id="id" placeholder="Enter Id" name="id">
+			</div>
+			<input type="button" value="중복확인" class="btn btn-default" id="check">
+			<input type="button" value="사용하기" class="btn btn-default" id="use">
+		</form>
+	</div>
+</body>
+</html>
